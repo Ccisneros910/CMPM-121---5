@@ -8,6 +8,7 @@ public class PickupBehavior : MonoBehaviour
     private ParticleSystem effect;
 
     //Start is called before the first frame update
+    // baldedlhaldkj
     void Start()
     {
         effect = GetComponent<ParticleSystem>();
