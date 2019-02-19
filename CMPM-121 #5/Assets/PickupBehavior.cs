@@ -8,7 +8,6 @@ public class PickupBehavior : MonoBehaviour
     private ParticleSystem effect;
 
     //Start is called before the first frame update
-    // baldedlhaldkj
     void Start()
     {
         effect = GetComponent<ParticleSystem>();
@@ -18,6 +17,14 @@ public class PickupBehavior : MonoBehaviour
     {
         if (other.name == "Player")
         {
+            if(this.name == "Key (0)")
+            {
+                double_door_open.got_key_1 = true;
+            }
+            if (this.name == "Key (1)")
+            {
+                double_door_open.got_key_2 = true;
+            }
             effect.Play();
             yield return new WaitForSeconds(.5f);
             Destroy(gameObject);
