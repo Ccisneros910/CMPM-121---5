@@ -25,6 +25,11 @@ public class PickupBehavior : MonoBehaviour
             {
                 double_door_open.got_key_2 = true;
             }
+            if (this.name == "Key (2)")
+            {
+                double_door_open.got_key_3 = true;
+            }
+
             effect.Play();
             yield return new WaitForSeconds(.5f);
             Destroy(gameObject);
